@@ -3,7 +3,7 @@
 初めて物理シミュレーションに触る研究室の後輩向けに作成したチュートリアルです。作者は流体粒子法 (MPS法)を用いて固液連成計算の研究を行う修士2年の学生です。プログラミングについては決してプロではないので、実装等はあくまでも参考程度にしてください。
 
 ### 目的
-福井大学の[小石先生のHP](https://polymer.apphy.u-fukui.ac.jp/~koishi/lecture/mol_sim.php#sim_program)を参考に分子シミュレーションのプログラムを自作する。サンプルコードを研究でも活用可能なレベルに引き上げるためのヒントを得る。
+福井大学の[古石先生のHP](https://polymer.apphy.u-fukui.ac.jp/~koishi/lecture/mol_sim.php#sim_program)を参考に分子シミュレーションのプログラムを自作する。サンプルコードを研究でも活用可能なレベルに引き上げるためのヒントを得る。
 
 ### 対象となる読者
 - 今からシミュレーションを用いて研究したい。
@@ -22,7 +22,7 @@ git pull https://github.com/keigo-enomoto/MD_tutorial.git
 ```
 
 ### チュートリアルの全体像
-0. **[小石先生のHP](https://polymer.apphy.u-fukui.ac.jp/~koishi/lecture/mol_sim.php#sim_program)で「シミュレーションプログラム作成」まで勉強する。**
+0. **[古石先生のHP](https://polymer.apphy.u-fukui.ac.jp/~koishi/lecture/mol_sim.php#sim_program)で「シミュレーションプログラム作成」まで勉強する。**
 ここまでは、HPを参考に自習してください。筆者なりの回答を`0_Koishi_simulation`のディレクトリ内にまとめています。
 1. **0.で勉強した内容を踏まえて、MDシミュレーションのプログラムを作成してみる**
 実は、初学者にとっては0 -> 1が割とハードルがあるとは思いますが、まずはこの作業を試行錯誤しつつ頑張ってみてください。雑には、時間発展とともにポテンシャルエネルギーが下がりなおかつ温度が設定温度付近で揺らぐ程度であればおおよそ成功だと思います。(プログラミングがうまくいっているはずなのに、計算がうまくいかない場合は分子の密度や時間刻み幅、温度を補正する間隔等も調整してみてください。本チュートリアルではMDの計算結果自体はそこまで重要視しません。)
@@ -56,7 +56,7 @@ bashのコマンドにはさまざまなオプションを与えることがで�
 
 <div style="page-break-before:always"></div>
 
-## 0. [小石先生のHP](https://polymer.apphy.u-fukui.ac.jp/~koishi/lecture/mol_sim.php#sim_program)で「シミュレーションプログラム作成」まで勉強する。
+## 0. [古石先生のHP](https://polymer.apphy.u-fukui.ac.jp/~koishi/lecture/mol_sim.php#sim_program)で「シミュレーションプログラム作成」まで勉強する。
 
 非常に親切に書かれていますので、筆者が作成した解答例 (`0_Koishi_simulation`ディレクトリ内に存在) も参考に自学してみてください。ここでは、いくつかの注意点を述べます。
 1. **マジックナンバーの使用は極力減らす。**
@@ -164,7 +164,7 @@ int main(int argc, char **argv){
 `0_Koishi_simulation/4_6_force_Ar.c`を参考に実装してみましょう。**`+=`のような加算演算を行う変数は必ず初期化をしておく(値を0にしておく)ことを忘れないようにしてください。** 今回だと、`zero_force()`を用いて配列`fc`を初期化しているのと、ポテンシャルエネルギーを格納する`pot_erg`を初期化しています。初期化忘れはエラーの原因として多い実装ミスです。
 
 ### 1.6 コンパイルと実行について
-[小石先生のHP](https://polymer.apphy.u-fukui.ac.jp/~koishi/lecture/program1.php?type=nyumon)でも解説がありますが、作成したソースファイルをコンピュータが読めるような形に変更する必要があります。この作業をコンパイルと呼びます。作成された実行ファイルを実行することで、ソースファイルにプログラミングした内容をコンピュータに実行させることができます。
+[古石先生のHP](https://polymer.apphy.u-fukui.ac.jp/~koishi/lecture/program1.php?type=nyumon)でも解説がありますが、作成したソースファイルをコンピュータが読めるような形に変更する必要があります。この作業をコンパイルと呼びます。作成された実行ファイルを実行することで、ソースファイルにプログラミングした内容をコンピュータに実行させることができます。
 今回の場合、例えば以下のようにコンパイルします。
 ```sh
 gcc -Wall -o md md_program_base.c
