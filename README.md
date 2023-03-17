@@ -383,3 +383,6 @@ free(cd);
 **【参考文献】**
 - [並列プログラミング入門](https://www.utp.or.jp/book/b307057.html)
 - [OpenMPの基礎 片桐孝洋](https://www.r-ccs.riken.jp/wp/wp-content/uploads/2020/09/katagiri190425.pdf)
+
+
+ご指摘、ご要望等あれば `keno.rheo2525[at]gmail.com`までよろしくお願い申し上げます。
