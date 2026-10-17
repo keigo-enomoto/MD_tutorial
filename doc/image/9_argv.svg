@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" width="780" height="340" font-family="sans-serif" font-size="14">
+<rect width="780" height="340" fill="#ffffff"/>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+</defs>
+<text x="20" y="28" font-size="16" font-weight="bold" fill="#000">$ ./md_simulation -i input.txt -o out   →   argc = 5</text>
+
+<!-- argv -->
+<text x="20" y="74" fill="#000">argv</text>
+<g stroke="#333" stroke-width="1.5">
+<rect x="80" y="50" width="130" height="40" fill="#e8f0fe"/>
+<rect x="210" y="50" width="130" height="40" fill="#e8f0fe"/>
+<rect x="340" y="50" width="130" height="40" fill="#fff3cd"/>
+<rect x="470" y="50" width="130" height="40" fill="#e8f0fe"/>
+<rect x="600" y="50" width="130" height="40" fill="#fff3cd"/>
+</g>
+<g text-anchor="middle" fill="#000">
+<text x="145" y="75">"./md_simulation"</text>
+<text x="275" y="75">"-i"</text>
+<text x="405" y="75">"input.txt"</text>
+<text x="535" y="75">"-o"</text>
+<text x="665" y="75">"out"</text>
+<text x="145" y="110" font-size="12">argv[0]</text>
+<text x="275" y="110" font-size="12">argv[1]</text>
+<text x="405" y="110" font-size="12">argv[2]</text>
+<text x="535" y="110" font-size="12">argv[3]</text>
+<text x="665" y="110" font-size="12">argv[4]</text>
+</g>
+
+<!-- getopt calls -->
+<text x="20" y="148" font-weight="bold" fill="#000">getopt(argc, argv, "i:o:h") を繰り返し呼ぶ</text>
+
+<g stroke="#c0392b" stroke-width="1.8" fill="none" marker-end="url(#arr)">
+<path d="M275,160 L275,190"/>
+<path d="M535,160 L535,190"/>
+</g>
+<g stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+<path d="M405,160 L405,190" stroke-dasharray="4 3"/>
+<path d="M665,160 L665,190" stroke-dasharray="4 3"/>
+</g>
+
+<rect x="200" y="190" width="270" height="70" fill="#fde0dc" stroke="#c0392b" stroke-width="1.5"/>
+<g fill="#000" text-anchor="middle">
+<text x="335" y="214">1回目: 戻り値 'i'</text>
+<text x="335" y="236">optarg = "input.txt"</text>
+</g>
+<rect x="470" y="190" width="270" height="70" fill="#fde0dc" stroke="#c0392b" stroke-width="1.5"/>
+<g fill="#000" text-anchor="middle">
+<text x="605" y="214">2回目: 戻り値 'o'</text>
+<text x="605" y="236">optarg = "out"</text>
+</g>
+<rect x="200" y="285" width="540" height="40" fill="#e8f0fe" stroke="#333" stroke-width="1.5"/>
+<text x="470" y="310" text-anchor="middle" fill="#000">3回目: もう取り出すものがない → 戻り値 -1 (while を抜ける)</text>
+<text x="20" y="222" fill="#000" font-size="12">"i:" の : は</text>
+<text x="20" y="240" fill="#000" font-size="12">「引数を1つ取る」</text>
+</svg>

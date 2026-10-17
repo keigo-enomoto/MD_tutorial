@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" font-family="sans-serif" font-size="14">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<rect width="640" height="330" fill="#ffffff"/>
+<text x="20" y="28" fill="#000" font-weight="bold">head[c] : セル c の先頭の粒子 (空なら -1)</text>
+<text x="20" y="48" fill="#000">例: セル c = 7 に粒子 2, 5, 9 が入っているとき</text>
+<!-- head -->
+<text x="470" y="92" fill="#000">head[7]</text>
+<rect x="540" y="70" width="50" height="34" fill="#ffe9a8" stroke="#000" stroke-width="1.5"/>
+<text x="565" y="93" text-anchor="middle" fill="#000">9</text>
+<line x1="565" y1="104" x2="565" y2="176" stroke="#000" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="20" y="150" fill="#000">next[i] : i と同じセルの</text>
+<text x="20" y="168" fill="#000">次の粒子 (最後なら -1)</text>
+<!-- next array -->
+<g stroke="#000" stroke-width="1.5" fill="#ffffff">
+<rect x="90" y="180" width="50" height="34"/><rect x="140" y="180" width="50" height="34"/><rect x="190" y="180" width="50" height="34"/><rect x="240" y="180" width="50" height="34"/><rect x="290" y="180" width="50" height="34"/><rect x="340" y="180" width="50" height="34"/><rect x="390" y="180" width="50" height="34"/><rect x="440" y="180" width="50" height="34"/><rect x="490" y="180" width="50" height="34"/><rect x="540" y="180" width="50" height="34"/>
+</g>
+<rect x="190" y="180" width="50" height="34" fill="#ffe9a8" stroke="#000" stroke-width="1.5"/>
+<rect x="340" y="180" width="50" height="34" fill="#ffe9a8" stroke="#000" stroke-width="1.5"/>
+<rect x="540" y="180" width="50" height="34" fill="#ffe9a8" stroke="#000" stroke-width="1.5"/>
+<g fill="#000" text-anchor="middle">
+<text x="115" y="203">.</text><text x="165" y="203">.</text><text x="215" y="203">-1</text><text x="265" y="203">.</text><text x="315" y="203">.</text><text x="365" y="203">2</text><text x="415" y="203">.</text><text x="465" y="203">.</text><text x="515" y="203">.</text><text x="565" y="203">5</text>
+</g>
+<g fill="#000" text-anchor="middle">
+<text x="115" y="236">0</text><text x="165" y="236">1</text><text x="215" y="236">2</text><text x="265" y="236">3</text><text x="315" y="236">4</text><text x="365" y="236">5</text><text x="415" y="236">6</text><text x="465" y="236">7</text><text x="515" y="236">8</text><text x="565" y="236">9</text>
+</g>
+<text x="20" y="236" fill="#000">粒子 i</text>
+<!-- arrows: 9 -> 5 -> 2 -> end -->
+<path d="M579,214 C579,262 379,262 379,218" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#a)"/>
+<path d="M379,214 C379,262 229,262 229,218" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="20" y="300" fill="#000">i = head[7] = 9 → next[9] = 5 → next[5] = 2 → next[2] = -1 (終わり)</text>
+<text x="20" y="320" fill="#000">for(i = head[c]; i != -1; i = next[i]) で、セル c の粒子を全部たどれる</text>
+</svg>

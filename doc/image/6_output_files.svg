@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="340" viewBox="0 0 820 340" font-family="sans-serif" font-size="13">
+<rect width="820" height="340" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<text x="20" y="28" font-weight="bold" fill="#000">out/ (output_dir)</text>
+<rect x="20" y="45" width="200" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="32" y="72" fill="#000" font-weight="bold">parameters.txt</text>
+<text x="250" y="72" fill="#000" font-size="12">実行時のパラメータ(再現性の記録)</text>
+<line x1="500" y1="67" x2="578" y2="67" stroke="#000" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="580" y="45" width="220" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="590" y="72" fill="#000">input として再利用</text>
+<rect x="20" y="103" width="200" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="32" y="130" fill="#000" font-weight="bold">energy.dat</text>
+<text x="250" y="130" fill="#000" font-size="12">時系列 (time, U, K, E, T)</text>
+<line x1="500" y1="125" x2="578" y2="125" stroke="#000" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="580" y="103" width="220" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="590" y="130" fill="#000">gnuplot / Python</text>
+<rect x="20" y="161" width="200" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="32" y="188" fill="#000" font-weight="bold">snap_00000.xyz ...</text>
+<text x="250" y="188" fill="#000" font-size="12">位置のスナップショット</text>
+<line x1="500" y1="183" x2="578" y2="183" stroke="#000" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="580" y="161" width="220" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="590" y="188" fill="#000">VMD / OVITO</text>
+<rect x="20" y="219" width="200" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="32" y="246" fill="#000" font-weight="bold">particle_00000.vtu ...</text>
+<text x="250" y="246" fill="#000" font-size="12">位置 + 速度のスナップショット</text>
+<line x1="500" y1="241" x2="578" y2="241" stroke="#000" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="580" y="219" width="220" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="590" y="246" fill="#000">ParaView</text>
+<rect x="20" y="277" width="200" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="32" y="304" fill="#000" font-weight="bold">final.dat</text>
+<text x="250" y="304" fill="#000" font-size="12">最終配置 (init.dat と同形式)</text>
+<line x1="500" y1="299" x2="578" y2="299" stroke="#000" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="580" y="277" width="220" height="44" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="590" y="304" fill="#000">リスタート (init_file)</text>
+</svg>

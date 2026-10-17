@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="270" viewBox="0 0 780 270" font-family="sans-serif" font-size="13">
+<rect width="780" height="270" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<g fill="#fff" stroke="#000" stroke-width="1.5">
+<rect x="10" y="40" width="170" height="70"/>
+<rect x="250" y="40" width="130" height="70"/>
+<rect x="450" y="40" width="170" height="70"/>
+<rect x="650" y="40" width="120" height="70"/>
+<rect x="450" y="190" width="170" height="60"/>
+</g>
+<g fill="#000" text-anchor="middle">
+<text x="95" y="68" font-weight="bold">mk_init</text>
+<text x="95" y="90" font-size="11">./mk_init 2 0.8176 0.722 1</text>
+<text x="315" y="80" font-weight="bold">init.dat</text>
+<text x="535" y="68" font-weight="bold">md_simulation</text>
+<text x="535" y="90" font-size="11">init_file = init.dat</text>
+<text x="710" y="80" font-weight="bold">final.dat</text>
+<text x="535" y="215" font-weight="bold">md_simulation</text>
+<text x="535" y="235" font-size="11">init_file = final.dat</text>
+<text x="215" y="65" font-size="11">書き出す</text>
+<text x="415" y="65" font-size="11">読む</text>
+<text x="635" y="65" font-size="11">書く</text>
+<text x="718" y="170" font-size="11">リスタート</text>
+</g>
+<g stroke="#000" stroke-width="1.5" marker-end="url(#a)" fill="none">
+<line x1="180" y1="75" x2="248" y2="75"/><line x1="380" y1="75" x2="448" y2="75"/><line x1="620" y1="75" x2="648" y2="75"/>
+<path d="M710,110 L710,220 L622,220"/>
+</g>
+</svg>

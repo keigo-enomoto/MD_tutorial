@@ -1,0 +1,9 @@
+h = 0.000464811184996788
+target_temp = 0.722
+finish_time = 1.0
+norm_interval = 10
+output_interval = 100
+init_file = init.dat
+output_dir = out
+snapshot_interval = 200
+cutoff = 2.5

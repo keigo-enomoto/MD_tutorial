@@ -1,0 +1,8 @@
+nla = 2
+density = 0.817657464660018
+h = 0.000464811184996788
+target_temp = 0.722
+seed = 1
+finish_time = 1.0
+norm_interval = 10
+output_interval = 100
